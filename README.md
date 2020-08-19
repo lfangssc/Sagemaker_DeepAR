@@ -7,7 +7,7 @@ Sagemaker_DeepAR is the state of arts of time serires forecasting services that 
 - able to provide forecasts for items with little or no history at all
 
 ## Autoregressive recurrent network architecuture 
-
+![ ](DeepAR.png?raw=true "Title")
 
 
 
