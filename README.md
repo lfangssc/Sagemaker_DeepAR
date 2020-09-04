@@ -1,4 +1,4 @@
-# Sagemaker_DeepAR_takeaway
+# Sagemaker_DeepAR_tutorial
 ## Introduction 
 Sagemaker_DeepAR is the state of arts of time serires forecasting services that is built on autogressive recurrent Networks and probablic likelyhood functions. DeepAR distinct itself with other traditional time series tools on the cability of scale up predictions on hundreds to half million concureent and related time series objects, such as city traffic, electricty consumption over many users and demanding forecasting on e-commerce commodities. 
 
