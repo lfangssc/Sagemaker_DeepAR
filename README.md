@@ -34,7 +34,7 @@ DeepAR predictions are extremely stasifying, given the current samples have 300 
 ![ ](download2.png?raw=true "Title")
 
 
-## Forecasting on Walmart scales of 2660 different departments of 45 different stores
+## Forecasting on Walmart sales of 2660 different departments of 45 different stores
 In order to further test the power of DeepAR, Walmart sales data are used. The dataset comes from a Kaggle competition that Walmart uses to recruit talents who can successfully forcast future sales from a larege amount of histroical time series of more than 2500 different departments from 45 differnt Walmart stores. The data can be downloaded [Walmart Recruiting - Store Sales Forecasting](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)
 
 Walmart also provided additional features to improve predicion accuracy, the features are
