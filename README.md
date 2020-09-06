@@ -1,10 +1,12 @@
-# Sagemaker_DeepAR_tutorial
+# Time series forecast using AWS_Sagemaker_DeepAR
 ## Introduction 
-Sagemaker_DeepAR is the state of arts of time serires forecasting services that is built on autogressive recurrent Networks and probablic likelyhood functions. DeepAR distinct itself with other traditional time series tools on the cability of scale up predictions on hundreds to half million concureent and related time series objects, such as city traffic, electricty consumption over many users and demanding forecasting on e-commerce commodities. 
+Sagemaker_DeepAR is the state of arts of time serires forecasting services that is built on autogressive recurrent neural Networks and probablic likelyhood functions. DeepAR distinct itself with other traditional time series tools on the cabilities of scale up predictions on hundreds to half million concureent and related time series objects, the real life use cases are city traffic, electricty consumption and distribtuion, and demanding forecasting on e-commerce commodities. 
 
 ## Key advantagies
-- minimal manual feature engineering is needed
+- minimal feature engineering is needed
 - able to provide forecasts for items with little or no history at all
+- forecast scalup from hundreds to half million time series objects.
+- predict the latent time series pattens among competitiors or conjoint attributes.
 
 ## Autoregressive recurrent network architecuture 
 - The model architecture is a deriative of the recurrent neural network that predictions on Xt_((x_i,t), (zi, t-1)) where (zi, t-1) is the predicitons on time t-1.
@@ -16,7 +18,7 @@ Sagemaker_DeepAR is the state of arts of time serires forecasting services that 
 
 
 ## Input training data format
-The input training/validation data format has to be json, so Deep_AR can read it. The json has two sets of data, first is time series start time, all time series objects have to been exactely the same on the start time. The second set are the time series, each time series stored as a sub-list in a dictionary. The time series has no index in json, the index is defined in the programming. 
+The input training/validation data format has to be json, so Deep_AR can read it. The json has two sets of data, first is time series start time, all time series objects have to been exactely the same on the start time. The second set are the time series, each time series stored as a list in a key-value set. The time series has no index in json, the index is defined in the programming. 
 
 sample I:
 
@@ -24,12 +26,35 @@ sample I:
     {"start": "2016-01-01 00:00:00", "target": [5.811951024150367, 6.648385923124836, 6.72514532560852, 7.3421294797729395, 7.067992454862794, 7.669970762433436, 8.113335497453377, 8.221950922958216, 7.598966639354628, 7.904253522825946, 7.348111979112986, 6.2792606976551575, 5.018446305200392, 4.610506010100085, 4.9376307565525295, 3.971589392128109]}
 
 
-## prediction samples
+## Predictions on synthesized samples
 
-DeepAR predictions are extremely stasifying, given the current samples have 300 different time sereies, all of them can be well predicted. See below are one sample (zoom in version for the second one). More prediction visulzaions can been seen in the attached jupyter notebook.
+DeepAR predictions are extremely stasifying, given the current samples have 300 different synthesized time sereies, all of them can be well predicted. See below are one sample (zoom in version for the second one). More prediction visulzaions can been seen in the attached jupyter notebook.
 
 ![ ](download1.png?raw=true "Title")
 ![ ](download2.png?raw=true "Title")
+
+
+## Forecasting on Walmart scales of 2660 different departments of 45 different stores
+In order to further test the power of DeepAR, Walmart sales data are used. The dataset comes from a Kaggle competition that Walmart uses to recruit talents who can successfully forcast future sales from a larege amount of histroical time series of more than 2500 different departments from 45 differnt Walmart stores. The data can be downloaded [Walmart Recruiting - Store Sales Forecasting](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)
+
+Walmart also provided additional features to improve predicion accuracy, the features are
+
+- the store number
+- the week
+- Temperature
+- Fuel_prices
+- Markdown promotions
+- CPI: the counsumer price index
+- unmeployment rate
+- Isholiday: whether the week is a special holiday week
+
+Since Sagemaker only needs minimally feature engineering, therefore no fetures data are used in our test. The only data we used are the time-series.
+
+
+
+
+
+
 
 # Reference
 [Time series forecasting with DeepAR - Synthetic data](https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/deepar_synthetic/deepar_synthetic.ipynb)
