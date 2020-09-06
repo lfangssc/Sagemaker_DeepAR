@@ -48,9 +48,18 @@ Walmart also provided additional features to improve predicion accuracy, the fea
 - unmeployment rate
 - Isholiday: whether the week is a special holiday week
 
-Since Sagemaker only needs minimally feature engineering, therefore no fetures data are used in our test. The only data we used are the time-series.
+Since Sagemaker only needs minimally feature engineering, therefore no fetures data are used in our test. The only data we used are the time-series. Below are visualizations of the first 10 samples from the 2660 time series
 
-
+![ ](Unknown.png?raw=true "Title")
+![ ](Unknown-2.png?raw=true "Title")
+![ ](Unknown-3.png?raw=true "Title")
+![ ](Unknown-4.png?raw=true "Title")
+![ ](Unknown-5.png?raw=true "Title")
+![ ](Unknown-6.png?raw=true "Title")
+![ ](Unknown-7.png?raw=true "Title")
+![ ](Unknown-8.png?raw=true "Title")
+![ ](Unknown-9.png?raw=true "Title")
+![ ](Unknown-10.png?raw=true "Title")
 
 
 
