@@ -50,18 +50,18 @@ Walmart also provided additional features to improve predicion accuracy, the fea
 
 Since Sagemaker only needs minimally feature engineering, therefore no fetures data are used in our test. The only data we used are the time-series. Below are visualizations of the first 10 samples from the 2660 time series
 
-![ ](Unknown.png?raw=true "Title")
-![ ](Unknown-2.png?raw=true "Title")
-![ ](Unknown-3.png?raw=true "Title")
-![ ](Unknown-4.png?raw=true "Title")
-![ ](Unknown-5.png?raw=true "Title")
-![ ](Unknown-6.png?raw=true "Title")
-![ ](Unknown-7.png?raw=true "Title")
-![ ](Unknown-8.png?raw=true "Title")
-![ ](Unknown-9.png?raw=true "Title")
-![ ](Unknown-10.png?raw=true "Title")
+![ ](Unknown?raw=true "Title")
+![ ](Unknown-2?raw=true "Title")
+![ ](Unknown-3?raw=true "Title")
+![ ](Unknown-4?raw=true "Title")
+![ ](Unknown-5?raw=true "Title")
+![ ](Unknown-6?raw=true "Title")
+![ ](Unknown-7?raw=true "Title")
+![ ](Unknown-8?raw=true "Title")
+![ ](Unknown-9?raw=true "Title")
+![ ](Unknown-10?raw=true "Title")
 
-
+The predictions results are incredibley good, given only time-series data are used and no extra feature engineering. 80% forecasting are vitually the same with the real sales. 
 
 
 
